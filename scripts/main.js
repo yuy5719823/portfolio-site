@@ -17,13 +17,19 @@ class Main {
   }
 
   _setMobileIcon() {
-    document.querySelector(".mobile-menu__icon").addEventListener("click", function () {
-      this.gloablContainer.classList.toggle("menu-open");
-    });
+    document.querySelector(".mobile-menu__icon").addEventListener(
+      "click",
+      function () {
+        this.gloablContainer.classList.toggle("menu-open");
+      }.bind(this)
+    );
     this.menuItems.forEach((item) => {
-      item.addEventListener("click", function () {
-        this.gloablContainer.classList.remove("menu-open");
-      });
+      item.addEventListener(
+        "click",
+        function () {
+          this.gloablContainer.classList.remove("menu-open");
+        }.bind(this)
+      );
     });
   }
 
