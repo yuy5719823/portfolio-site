@@ -1,0 +1,244 @@
+/******************************************************************
+
+Stylesheet: ベーススタイル
+
+******************************************************************/
+
+// ----- font ------
+body {
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
+  background-color: #fffafa;
+}
+
+// ------ utilityclass ------
+.font-sm {
+  font-size: 14px;
+}
+
+.font-md {
+  font-size: 17px;
+}
+
+.font-lr {
+  font-size: 20px;
+}
+
+.font-lg {
+  font-size: 25px;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+.pt-sm {
+  padding-top: 24px !important;
+}
+
+.pt-lg {
+  padding-top: 80px !important;
+}
+
+.content-width {
+  width: 90%;
+  margin: 0 auto;
+  max-width: $contentMaxWith;
+}
+
+// ------ main ------
+
+#global-container {
+  position: relative;
+  overflow: hidden;
+}
+
+#top {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  .main-menu {
+    display: none;
+  }
+}
+
+#about {
+  position: relative;
+  height: 100vh;
+  @extend .pt-sm;
+
+  .profile {
+    height: 100%;
+    opacity: 0;
+    transition: all 1.5s;
+    transform: translateY(48px);
+
+    &__container {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &.inview {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &__image {
+      img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    &__info {
+      @extend .font-md;
+      text-align: center;
+
+      & .name {
+        @extend .font-lg;
+      }
+    }
+  }
+
+  .profile-detail {
+    padding-bottom: 16px;
+    & > div {
+      padding-top: 16px;
+    }
+  }
+
+  .plan {
+    text-align: center;
+    padding-bottom: 32px;
+    width: 100%;
+    &-mes {
+      padding: 12px 0;
+      background-color: $boxColor;
+      border-radius: 24px;
+      & h3 {
+        @extend .font-lg;
+        padding-top: 8px;
+      }
+    }
+  }
+}
+
+#skils {
+  // height: 100vh;
+  @extend .pt-sm;
+
+  & .skilList {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#products {
+  @extend.pt-sm;
+  padding-bottom: 32px;
+  .product {
+    padding-top: 32px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    opacity: 0;
+    transition: all 1.5s;
+    transform: translateY(48px);
+
+    &.inview {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &__column {
+      max-width: 350px;
+      height: 500px;
+      background-color: $boxColor;
+      border-radius: 6px;
+      padding: 8px;
+
+      & img {
+        width: 100%;
+        height: 200px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+    }
+
+    &__mes {
+      padding-top: 12px;
+      &-title {
+        @extend .font-lr;
+        padding-bottom: 12px;
+      }
+      &-text {
+        @extend .font-sm;
+      }
+    }
+
+    &__stack {
+      padding-top: 14px;
+      @extend .font-sm;
+    }
+  }
+}
+
+.footer-nav {
+  padding: 32px 0;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+
+  .copy {
+    padding-top: 12px;
+  }
+}
+
+.link {
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.setline.inview {
+  border-bottom: 1.5px solid;
+  animation-name: writeUnderline;
+  animation-duration: 5s;
+}
+
+@keyframes writeUnderline {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}

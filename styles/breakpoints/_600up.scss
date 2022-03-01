@@ -1,0 +1,17 @@
+/******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+
+.hero__title {
+  top: 15px !important;
+  left: 15px !important;
+  font-size: 24px !important;
+}
+
+.left-img {
+  & img {
+    object-position: 0;
+  }
+}

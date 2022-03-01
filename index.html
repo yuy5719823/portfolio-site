@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Kameron:wght@400;700&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <!-- normalize -->
+    <link rel="stylesheet" href="styles/vendors/bootstrap-reboot.css" />
+    <!-- vendor -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>yuya portfolio</title>
+  </head>
+  <body>
+    <div id="global-container">
+      <nav class="mobile-menu">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item"><a href="#top">top</a></li>
+          <li class="mobile-menu__item"><a href="#about">about</a></li>
+          <li class="mobile-menu__item"><a href="#skils">skils</a></li>
+          <li class="mobile-menu__item"><a href="#products">products</a></li>
+        </ul>
+      </nav>
+      <div id="container">
+        <section id="top">
+          <div class="mobile-menu__icon"><span></span><span></span><span></span></div>
+          <nav class="main-menu">
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a href="#top">top</a></li>
+              <li class="main-menu__item"><a href="#about">about</a></li>
+              <li class="main-menu__item"><a href="#skils">skils</a></li>
+              <li class="main-menu__item"><a href="#products">products</a></li>
+            </ul>
+          </nav>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <div class="hero__title">yuya portfolio</div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide left-img"><img src="images/img-01.JPG" alt="写真1" /></div>
+              <div class="swiper-slide"><img src="images/img-02.jpg" alt="写真2" /></div>
+              <div class="swiper-slide"><img src="images/img-03.jpg" alt="写真3" /></div>
+              <div class="swiper-slide"><img src="images/img-04.JPG" alt="写真4" /></div>
+            </div>
+            <!-- <div class="hero__footer">
+              welcome!
+            </div> -->
+          </div>
+        </section>
+        <section id="about" class="content-width">
+          <h1 class="setline">about</h1>
+          <div class="profile">
+            <div class="profile__container">
+              <div class="profile__image">
+                <img src="images/profile.jpg" alt="プロフィール写真" />
+              </div>
+              <div class="profile__info">
+                <div class="name">國武 佑哉</div>
+                <div class="profile-detail">
+                  <div class="birth">誕生: 1997年</div>
+                  <div class="place">出身: 福岡県</div>
+                  <div class="univ">大学: 九州産業大学 情報科学部</div>
+                </div>
+                <div class="link">
+                  <ul class="link__list">
+                    <li class="link__item">
+                      <a href="https://twitter.com/yua5357"><img src="icons/twitterIcon.png" alt="twitter" /></a>
+                    </li>
+                    <li class="link__item">
+                      <a href="https://github.com/yuy5719823"><img src="icons/gitIcon.png" alt="git" /></a>
+                    </li>
+                    <li class="link__item">
+                      <a href="https://yuakun.hateblo.jp/archive"><img src="icons/blogIcon.png" alt="blog" /></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="plan">
+                <div class="plan-mes">
+                  <h3>これから</h3>
+                  <p>誰かの役に立つもの作りがしたい!!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="skils" class="content-width">
+          <h1 class="setline">skils</h1>
+          <div class="skilList"></div>
+        </section>
+        <section id="products" class="content-width">
+          <h1 class="setline">products</h1>
+          <div class="product">
+            <div class="product__column">
+              <img src="images/mydict-image.jpeg" alt="" />
+              <div class="product__content">
+                <div class="product__mes">
+                  <div class="product__mes-title">MyDictionary</div>
+                  <div class="product__mes-text">「自分だけの辞書を作ろう!」というコンセプトのアプリ</div>
+                  <div class="product__stack">
+                    <div class="product__stack-title">技術スタック</div>
+                    <ul>
+                      <li>React</li>
+                      <li>Ruby on Rails</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <button class="linkBtn">
+                <a class href="https://mydictapp.netlify.app">アプリへ</a>
+              </button>
+            </div>
+          </div>
+        </section>
+        <footer id="footer">
+          <div class="footer-nav">
+            <div class="link">
+              <ul class="link__list">
+                <li class="link__item">
+                  <a href="https://twitter.com/yua5357"><img src="icons/twitterIcon.png" alt="twitter" /></a>
+                </li>
+                <li class="link__item">
+                  <a href="https://github.com/yuy5719823"><img src="icons/gitIcon.png" alt="git" /></a>
+                </li>
+                <li class="link__item">
+                  <a href="https://yuakun.hateblo.jp/archive"><img src="icons/blogIcon.png" alt="blog" /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="copy">&copy yuya kunitake</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+  <script src="scripts/libs/heroSlider.js"></script>
+  <script src="scripts/libs/scroll.js"></script>
+  <script src="scripts/libs/fetchSkils.js"></script>
+  <script src="scripts/libs/makeChartList.js"></script>
+  <script src="/scripts/main.js"></script>
+</html>

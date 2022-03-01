@@ -1,0 +1,33 @@
+.swiper {
+  // overflow: visible;
+
+  .swiper-slide {
+    & > img {
+      width: 100%;
+      height: 100vh;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .hero {
+    &__title {
+      position: absolute;
+      z-index: 100;
+      top: 5px;
+      left: 5px;
+      color: $cWhite;
+      font-size: 16px;
+    }
+
+    &__footer {
+      z-index: 100;
+    }
+  }
+}
+
+.left-img {
+  & img {
+    object-position: 15% 100%;
+  }
+}

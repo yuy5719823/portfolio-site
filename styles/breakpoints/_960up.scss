@@ -1,0 +1,91 @@
+/******************************************************************
+
+Stylesheet: 960px以上のモニタで適用
+
+******************************************************************/
+// utilityclass
+.font-sm {
+  font-size: 16px;
+}
+
+.font-md {
+  font-size: 19px;
+}
+
+.font-lr {
+  font-size: 23px;
+}
+
+.font-lg {
+  font-size: 36px;
+}
+
+.mb-lg {
+  margin-bottom: 150px !important;
+}
+
+.pb-lg {
+  padding-bottom: 150px !important;
+}
+
+.pt-sm {
+  padding-top: 90px !important;
+}
+
+.pt-lg {
+  padding-top: 150px !important;
+}
+
+#top {
+  padding: 12px 240px 12px 12px;
+  overflow: hidden !important;
+
+  .main-menu {
+    display: block;
+    position: absolute;
+    top: 35%;
+    right: 90px;
+    z-index: 1000;
+    &__list {
+      list-style: none;
+    }
+    &__item {
+      font-size: 24px;
+      padding-bottom: 12px;
+      & > a {
+        color: $cGray;
+        text-decoration: none;
+      }
+    }
+  }
+  .mobile-menu__icon {
+    display: none;
+  }
+}
+
+#about {
+  height: 50vh;
+  .profile__container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .plan {
+    width: 260px;
+  }
+}
+
+#skils {
+  height: 50vh;
+
+  & .skilList {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+#products {
+  .product__column {
+    flex-direction: row;
+  }
+}
