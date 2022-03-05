@@ -4,7 +4,7 @@ class ScrollObserver {
     this.cb = cb;
     const defaultOptions = {
       root: null,
-      rootMargin: "-200px 0px",
+      rootMargin: "-100px 0px",
       threshold: 0,
       once: true,
     };
