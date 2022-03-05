@@ -530,6 +530,26 @@ Stylesheet: 960px以上のモニタで適用
   #top .main-menu__item > a {
     color: #a9a9a9;
     text-decoration: none;
+    position: relative;
+  }
+  #top .main-menu__item > a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 2px;
+    background-color: #a9a9a9;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+  }
+  #top .main-menu__item > a:hover::after {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   #top .mobile-menu__icon {
     display: none;
